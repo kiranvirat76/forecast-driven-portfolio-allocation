@@ -1,26 +1,28 @@
 # Forecast-Driven Portfolio Allocation
 
-Quantitative equity forecasting, volatility modelling, and portfolio optimization using ARIMA, Prophet, ensemble modelling, and walk-forward validation on NSE equities.
+Quantitative time-series forecasting, volatility analysis, and portfolio optimization on NSE equities using ARIMA, Prophet, ensemble modelling, and walk-forward validation.
 
 ---
 
 # Overview
 
-This project implements a complete quantitative time-series forecasting workflow for Indian equity markets using:
+This project implements a full quantitative forecasting workflow for Indian equity markets, combining statistical time-series models, volatility diagnostics, and allocation strategies to evaluate short-horizon predictive signals.
+
+The workflow includes:
 
 - ARIMA forecasting
-- Facebook Prophet
+- Prophet forecasting
 - Ensemble modelling
-- Volatility analysis
+- Volatility regime analysis
 - Walk-forward validation
 - Portfolio optimization
 - Residual diagnostics
 
-The objective is to evaluate whether classical statistical forecasting methods can generate meaningful short-horizon signals for portfolio allocation.
+The primary objective is to assess whether classical forecasting methods can generate economically meaningful signals for portfolio construction while maintaining strict validation discipline and avoiding look-ahead bias.
 
 ---
 
-# Stocks Used
+# NSE Equities Analysed
 
 - RELIANCE.NS
 - HDFCBANK.NS
@@ -35,12 +37,12 @@ The objective is to evaluate whether classical statistical forecasting methods c
 1. Data acquisition using Yahoo Finance
 2. Data preprocessing and stationarity testing
 3. ARIMA order selection via AIC grid search
-4. Walk-forward forecasting validation
+4. Rolling walk-forward forecasting validation
 5. Prophet forecasting
 6. Inverse-MAPE ensemble construction
 7. Volatility regime analysis
 8. Forecast-return portfolio allocation
-9. Residual diagnostics and evaluation
+9. Residual diagnostics and model evaluation
 
 ---
 
@@ -52,11 +54,12 @@ The objective is to evaluate whether classical statistical forecasting methods c
 - Ljung-Box residual diagnostics
 - Jarque-Bera normality testing
 - Rolling volatility analysis
-- Portfolio allocation using forecast-return and inverse-volatility weighting
+- Forecast-return portfolio construction
+- Inverse-volatility weighting
 
 ---
 
-# Results
+# Visual Results
 
 ## Dashboard
 
@@ -90,10 +93,17 @@ The objective is to evaluate whether classical statistical forecasting methods c
 ```text
 forecast-driven-portfolio-allocation/
 │
-├── outputs/
 ├── notebooks/
+├── outputs/
 ├── reports/
-├── src/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
+```
+
+---
+
+# Author
+
+Kiran Kumar  
+Indian Institute of Technology Guwahati
